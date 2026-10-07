@@ -7,6 +7,7 @@ public class rotate_number_k {
         int number = scr.nextInt();
         System.out.print("Enter the number of rotation: ");
         int k = scr.nextInt();
+        scr.close();
         if (number == 0) {
             System.out.println("Rotated number is: 0");
             return;
@@ -34,6 +35,5 @@ public class rotate_number_k {
         int r = number % divide;
         int rotated_number = r * multiply + q;
         System.out.println("Rotated number is: " + rotated_number);
-
     }
 }
