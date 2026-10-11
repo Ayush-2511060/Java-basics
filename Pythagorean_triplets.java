@@ -17,18 +17,20 @@ public class Pythagorean_triplets {
         if (max <= number3) {
             max = number3;
         }
-        System.out.println("|========================|");
         if (max == number1) {
             flag = ((number2 * number2 + number3 * number3) == (number1*number1));
-            System.out.println("|          " + flag + "          |");
-            System.out.println("|========================|");
         } else if (max == number2) {
             flag = ((number1 * number1 + number3 * number3) == (number2*number2));
+        } else {
+            flag = ((number1 * number1 + number2 * number2) == (number3*number3));
+        }
+        
+        System.out.println("|========================|");
+        if (flag) {
             System.out.println("|          " + flag + "          |");
             System.out.println("|========================|");
         } else {
-            flag = ((number1 * number1 + number2 * number2) == (number3*number3));
-            System.out.println("|          " + flag + "          |");
+            System.out.println("|          " + flag + "         |");
             System.out.println("|========================|");
         }
     }
