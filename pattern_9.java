@@ -5,6 +5,7 @@ public class pattern_9 {
         Scanner scr = new Scanner(System.in);
         System.out.print("Enter the value of N: ");
         int n = scr.nextInt();
+        scr.close();
         System.out.println("|==========Pattern==========|");
         for(int i = 0; i <n; i++){
             for(int j = 0; j <n; j++){

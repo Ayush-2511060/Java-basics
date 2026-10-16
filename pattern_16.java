@@ -1,0 +1,40 @@
+// |===================Pattern===================|
+// for n = 4
+// 1                        1
+// 1    2               2   1
+// 1    2   3       3   2   1
+// 1    2   3   4   3   2   1
+// |=============================================|
+import java.util.*;
+
+public class pattern_16 {
+    public static void main(String[] args){
+        Scanner scr = new Scanner(System.in);
+        System.out.print("Enter the Value of N: ");
+        int n = scr.nextInt();
+        scr.close();
+        System.out.println("|==========Pattern==========|");
+        int sp = 2*n-3;
+        int st = 1;
+        for(int i = 1; i <= n; i++){
+            int value = 1;
+            for(int j = 1; j <= st; j++){
+                System.out.print(value + "\t");
+                value++;
+            }
+            for(int j = 1; j <= sp; j++){
+                System.out.print("\t");
+            }
+            if(i==n){st--;
+                    value--;}
+            for(int j = 1; j <= st; j++){
+                value--;
+                System.out.print(value + "\t");
+            }
+            st++;
+            sp -= 2;
+        System.out.println("");
+        }
+        System.out.println("|===========================|");
+    }
+}
